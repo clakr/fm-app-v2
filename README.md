@@ -16,6 +16,6 @@ This project was created using `bun init` in bun v0.6.1. [Bun](https://bun.sh) i
 
 ## Todo
 
-- [ ] git init
+- [x] git init
 - [ ] write files
 - [ ] project metadata (title, github repo)
