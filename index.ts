@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import modifyGitConfig from "./src/utils/modifyGitConfig";
+import modifyGitConfig from "./utils/modifyGitConfig";
 
 const program = new Command();
 
