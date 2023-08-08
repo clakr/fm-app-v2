@@ -1,5 +1,11 @@
 declare global {
-  var projectRootPath: strinf;
+  var projectRootPath: string;
+  var config: {
+    title: string;
+    link: string;
+    template: string;
+    css: string;
+  };
 }
 
 export {};
