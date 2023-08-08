@@ -1,7 +1,10 @@
 import { Command } from "commander";
 import modifyGitConfig from "./utils/modifyGitConfig";
+import copyFiles from "./utils/copyFiles";
 
 const program = new Command();
+
+global.projectRootPath = "/Users/adsi2227/Desktop/projects/fm-app";
 
 async function main() {
   let config = {
@@ -20,7 +23,8 @@ async function main() {
     })
     .parse();
 
-  modifyGitConfig();
+  // modifyGitConfig();
+  copyFiles();
 }
 
 main().catch((e) => {
