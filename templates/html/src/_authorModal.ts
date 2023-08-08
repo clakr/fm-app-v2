@@ -46,6 +46,9 @@ function keyDownListener(
 
   if (key === "Escape") {
     this.style.display = "none";
+
+    document.body.style.height = "unset";
+    document.body.style.overflow = "unset";
   }
 }
 
@@ -53,7 +56,7 @@ function keyDownListener(
   const isMac = window.navigator.platform === "MacIntel";
 
   const markup = `
-    <button type='button' class="keyboard">
+    <button type='button' id="keyboardBtn">
       Project Information
       ${
         isMac
@@ -63,7 +66,7 @@ function keyDownListener(
       }
     </button>
 
-    <div class="modal">
+    <div class=modal id="projectInfoModal">
       <div class="modal__overlay"></div>
       <div class="modal__content">
         <div class="modal__header">
@@ -146,16 +149,31 @@ function keyDownListener(
     .querySelector<HTMLButtonElement>(".modal__close")
     ?.addEventListener("click", () => {
       modal.style.display = "none";
+
+      document.body.style.height = "unset";
+      document.body.style.overflow = "unset";
+    });
+
+  document
+    .querySelector<HTMLButtonElement>(".modal__overlay")
+    ?.addEventListener("click", () => {
+      modal.style.display = "none";
+
+      document.body.style.height = "unset";
+      document.body.style.overflow = "unset";
     });
 
   const html = document.querySelector("html");
   if (!html) return;
 
-  const btnKeyboard = document.querySelector<HTMLButtonElement>(".keyboard");
+  const btnKeyboard = document.querySelector<HTMLButtonElement>("#keyboardBtn");
   if (!btnKeyboard) return;
 
   btnKeyboard.addEventListener("click", function () {
     modal.style.display = "block";
+
+    document.body.style.height = "100%";
+    document.body.style.overflow = "hidden";
   });
 
   window.addEventListener("load", function () {

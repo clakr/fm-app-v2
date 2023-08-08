@@ -16,7 +16,7 @@
   --linkHoverColor: #3b82f6; /* blue500 */
 }
 
-.keyboard {
+#keyboardBtn {
   font-family: "Wix Madefor Display", sans-serif;
   position: fixed;
   inset: auto 1rem 1rem auto;
@@ -28,11 +28,11 @@
   color: var(--textColor);
 }
 
-.keyboard:is(:active, :hover) {
+#keyboardBtn:is(:active, :hover) {
   opacity: 1;
 }
 
-.keyboard > kbd {
+#keyboardBtn > kbd {
   border: 1px solid var(--borderColor);
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
@@ -40,24 +40,24 @@
   font-weight: 700;
 }
 
-.keyboard > kbd:first-child {
+#keyboardBtn > kbd:first-child {
   margin-left: 0.75rem;
 }
 
-.modal {
+#projectInfoModal.modal {
   display: none;
   font-family: "Wix Madefor Display", sans-serif;
   color: var(--textColor);
 }
 
-.modal__overlay {
+#projectInfoModal .modal__overlay {
   background-color: rgba(0, 0, 0, 0.45);
   position: fixed;
   inset: 0;
   animation: overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.modal__content {
+#projectInfoModal .modal__content {
   background-color: var(--backgroundColor);
   border-radius: 1rem;
   box-shadow: hsl(206 22% 7% / 35%) 0 1rem 3.8rem -1rem,
@@ -70,32 +70,32 @@
   padding: 2rem;
 }
 
-.modal__content:focus {
+#projectInfoModal .modal__content:focus {
   outline: none;
 }
 
-.modal__header {
+#projectInfoModal .modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.modal__title {
+#projectInfoModal .modal__title {
   font-size: 2rem;
   font-weight: 600;
 }
 
-.modal__close > svg {
+#projectInfoModal .modal__close > svg {
   height: 2rem;
   width: 2rem;
   fill: var(--textColor);
 }
 
-.modal__body {
+#projectInfoModal .modal__body {
   margin-top: 2rem;
 }
 
-.modal__list {
+#projectInfoModal .modal__list {
   font-size: 1.2rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -103,33 +103,33 @@
   row-gap: 0.5rem;
 }
 
-.modal__list > dd {
+#projectInfoModal .modal__list > dd {
   font-weight: 600;
   white-space: nowrap;
 }
 
-.modal__list > dt > a {
+#projectInfoModal .modal__list > dt > a {
   color: var(--linkColor);
 }
 
-.modal__list > dt > a:is(:active, :hover) {
+#projectInfoModal .modal__list > dt > a:is(:active, :hover) {
   color: var(--linkHoverColor);
 }
 
-.modal__icons {
+#projectInfoModal .modal__icons {
   display: flex;
   column-gap: 2rem;
   margin-top: 2rem;
   justify-content: center;
 }
 
-.modal__icons > a > svg {
+#projectInfoModal .modal__icons > a > svg {
   height: 2.4rem;
   width: 2.4rem;
   fill: var(--linkColor);
 }
 
-.modal__icons > a > svg:is(:hover, :active) {
+#projectInfoModal .modal__icons > a > svg:is(:hover, :active) {
   fill: var(--linkHoverColor);
 }
 
