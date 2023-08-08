@@ -22,6 +22,6 @@ async function main() {
   generateFiles();
 }
 
-main().catch((e) => {
-  console.error(e);
+main().catch((error) => {
+  console.error(error);
 });
